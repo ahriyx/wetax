@@ -14,13 +14,13 @@ npm run build // 打包文件上传 <br/>
 
 ## 目录结构
 ├── src             //主文件 <br/>
-│  ├── components   //组件  <br/>
-│  ├── pages        //页面  <br/>
-│  ├── mixins        //混合 <br/>
-│  ├── utils        //工具  <br/>
-│  ├── styles       //样式  <br/>
-│  ├── app.wpy      //配置项  <br/>
-│　└── index.template.html <br/>
+│　├── components   //组件  <br/>
+│　├──  pages        //页面  <br/>
+│　├── mixins        //混合 <br/>
+│　├──  utils        //工具  <br/>
+│　├──  styles       //样式  <br/>
+│　├── app.wpy      //配置项  <br/>
+│　└──index.template.html <br/>
 ├── .editorconfig <br/>
 ├── .eslintignore <br/>
 ├── .eslintrc.js <br/>
