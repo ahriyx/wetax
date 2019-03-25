@@ -1,13 +1,16 @@
 {
-  "description": "税",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram",
-  "appid": "touristappid",
-  "projectname": "wetax",
-  "miniprogramRoot": "./dist"
+	"description": "税",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"appid": "wxb07ecc28b2029098",
+	"projectname": "mytax",
+	"miniprogramRoot": "dist/",
+	"condition": {}
 }
