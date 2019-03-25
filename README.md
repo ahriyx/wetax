@@ -1,18 +1,18 @@
 # 微纳税
-***
-###  项目介绍
+
+##  项目介绍
 微纳税个人项目demo
 
-### 环境依赖
+## 环境依赖
 node v8.11.3 <br/>
 wepy v1.7.3  <br/>
-### 开发命令
+## 开发命令
 npm install //安装依赖包 <br/>
 npm run dev //运行 <br/>
 npm run build // 打包文件上传 <br/>
 
 
-### 目录结构
+## 目录结构
 ├── src             //主文件 <br/>
 │  ├── components   //组件  <br/>
 │  ├── pages        //页面  <br/>
@@ -34,7 +34,7 @@ npm run build // 打包文件上传 <br/>
 ├── README.md <br/>
 └── wepy.config.js <br/>
 
-#### 注意事项
+### 注意事项
 1.微信开发者工具打开项目目录为生成的dist文件 <br/>
 2.新建项目后需要关闭右上角详情下的 <br/>
 　　(1) ES6转ES5 <br/>
