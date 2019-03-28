@@ -16,27 +16,31 @@
       pages: [
         'pages/index',
         'pages/cacu',
+        'pages/account',
       ],
       window: {
         backgroundTextStyle: 'dark',
-        navigationBarBackgroundColor: '#fff',
+        navigationBarBackgroundColor: '#000',
         navigationBarTitleText: '微纳税',
         navigationBarTextStyle: '#f80',
-        backgroundColor: '#eeeeee'
       },
       tabBar: {
         color: '#AEAEAE',
         selectedColor: '#CFAB56',
-        borderStyle: 'white',
+        borderStyle:'white',
         backgroundColor: '#fff',
         list: [{
-            pagePath: 'pages/index',
-            text: '首页'
-          },
-          {
-            pagePath: 'pages/cacu',
-            text: '个税计算器'
-          }
+          pagePath: 'pages/index',
+          text: '首页'
+        },
+        {
+          pagePath: 'pages/cacu',
+          text: '个税计算器'
+        },
+        {
+          pagePath: 'pages/account',
+          text: '个人中心'
+        }
         ]
       }
     }

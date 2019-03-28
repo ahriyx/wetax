@@ -1,44 +1,110 @@
 <style lang="less">
-  .userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  // wxss
+  .top {
+    padding: 0 36rpx;
+    background: linear-gradient(to right, #202020, #1A1A1A);
+    height: 202rpx;
+    .top-txt {
+      .txts {
+        font-size: 26rpx;
+        color: #F3F3F3;
+        line-height: 38rpx;
+        padding-top: 30rpx;
+        display: block;
+      }
+      .val {
+        color: #CFAB56;
+        font-size: 48rpx;
+        margin: 40rpx 0 82rpx 0;
+      }
+    }
   }
-
-  .userinfo-avatar {
-    width: 80rpx;
-    height: 80rpx;
-    border-radius: 50%;
+  .middle {
+    height: 164rpx;
+    background: #F5F5F5;
+    padding: 32rpx;
+    box-sizing: border-box;
+    button {
+      width: 686rpx;
+      height: 88rpx;
+      background: #CFAB56;
+      border-radius: 10rpx;
+      color: #fff;
+      font-size: 36rpx;
+      text-align: center;
+    }
   }
-
-  .userinfo-nickname {
-    color: #aaa;
+  .record {
+    background: #fff;
+    padding-left: 32rpx;
+    .title {
+      padding-left: 20rpx;
+      font-size: 26rpx;
+      color: #666;
+      padding-top: 30rpx;
+    }
   }
 </style>
+
 <template>
-  <view class="container">
-    <!-- <view class="userinfo" @tap="handleViewTap">
-      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
-      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
-    </view> -->
-    <view class="tall">
-      shoyy
+  <!-- wxml -->
+  <view class="containers">
+    <view class="top">
+      <view class="top-txt">
+        <text class="txts">本月个税专项附加扣除</text>
+        <text class="val">￥2000.00</text>
+      </view>
+    </view>
+    <view class="middle">
+      <button>录入扣除项</button>
+    </view>
+    <view class="record">
+      <view class="title">专项附加扣除记录</view>
+      <view class="filter">
+        {{ num }}
+      </view>
+      <view class="tttt">{{add}}</view>
+      <repeat for="{{array}}" key="index" index="index" item="item">
+      </repeat>
     </view>
   </view>
+  <mask title="myTitle" :isOpen='isOpen'></mask>
 </template>
 
 <script>
-  import wepy from 'wepy'
+  import wepy from 'wepy';
+  import Mask from "../components/mask";
   export default class Index extends wepy.page {
-    config = {
-      navigationBarTitleText: 'test'
+    config = {}; //对应index.json配置文件
+    // 剩下的对应的是index.js文件
+    data = {
+      array: [],
+      num: 1,
+      values: 1,
+      isOpen: true
     }
-
-
+    methods = {}
+    watch = {
+      num(newVal, oldVal) {
+        console.log(`${newVal}->${oldVal}`);
+      }
+    }
+    events = {}
+    computed = {
+      add() {
+        // console.log(this.values);
+        return this.values + 1;
+      }
+    }
+    components = {
+      mask: Mask
+    }
     onLoad() {
-
+      console.log(this.values);
+      setInterval(() => {
+        this.num++;
+        // this.$apply();
+      }, 1000)
     }
-    handleViewTap(){}
-
   }
 </script>
